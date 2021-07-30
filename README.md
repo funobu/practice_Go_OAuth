@@ -18,7 +18,7 @@ var slackOAuthConfig = &oauth2.Config{
 	RedirectURL:  "http://localhost:8000/auth/slack/callback",
 	ClientID:     os.Getenv("SLACK_OAUTH_CLIENT_ID"), 
 	ClientSecret: os.Getenv("SLACK_OAUTH_CLIENT_SECRET"),
-	Scopes:       []string{"https://www.googleapis.com/auth/userinfo.email"},
+	Scopes:       []string{"https://slack.com/api/users.identity"},
 	Endpoint:     slack.Endpoint,
 }
 ```
